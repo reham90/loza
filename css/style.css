@@ -413,6 +413,10 @@ width: 0;
     line-height: 20px;
     padding: 0 5px;
     color: var(--main-color);
+    font-family: 'Montserrat-Arabic-Light';
+  }
+  .product-link{
+    padding: 0 10px;
   }
   .cats-dispaly {
     position: static;
@@ -862,7 +866,7 @@ html[dir="ltr"] .caption-title{
   /* text-align: center; */
   display:flex;
   justify-content: flex-start;
-  align-items: center;
+
 
 }
 .about-text{
@@ -935,6 +939,12 @@ font-family: "Montserrat-Arabic-Light";
     margin-top: 0;
     padding: 30px 0;
   }
+  .about-us-numbers{
+    margin: 0 auto;
+  }
+  .cats-dispaly .cat-li:after{
+    height: 0;
+  }
   .about-us-cont{
     flex-direction: column;
     justify-content: center;
@@ -991,7 +1001,7 @@ font-family: "Montserrat-Arabic-Light";
   
 }
 .mission-vision-section-img{
-  margin-inline-start: calc((100vw - 1650px) / 2);
+  margin-inline-start: -60px;
   margin-inline-end: 40px;
   max-width: 100%;
 }
@@ -1110,6 +1120,15 @@ font-family: "Montserrat-Arabic-Light";
   
     padding: 100px 0;
 
+}
+.product-block .services-figure{
+  width: 217px;
+  height: 217px;
+}
+.product-block .services-img{
+  width:auto !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-us-head-2{
   font-size: 30px;
@@ -2377,6 +2396,10 @@ html[dir="rtl"] .footer-accordion.active:after {
   .best-employees-section{
     padding: 25px 0 78px;
   }
+  .product-block .services-figure{
+    width:170px;
+    height: 170px;
+  }
   .best-employees-text h2{
     font-size: 24px;
     text-align: center;
@@ -2448,6 +2471,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   html[dir="ltr"] .mission-vision-section-img {
     margin-inline-start:-18px;
   }
+  html[dir="rtl"] .mission-vision-section-img {
+    margin-inline-start:-20px ;
+  }
   .mission-vision-record{
     margin-bottom: 20px;
   }
@@ -2497,6 +2523,9 @@ html[dir="rtl"] .footer-accordion.active:after {
 html[dir="ltr"] .mission-vision-section-img {
   margin-inline-start:-10px;
 }
+html[dir="rtl"] .mission-vision-section-img {
+  margin-inline-start:-20px ;
+}
 }
 
 @media only screen and (max-width: 994px)  and (min-width: 768px)  {
@@ -2541,4 +2570,5 @@ html[dir="ltr"] .mission-vision-section-img {
 .contact-record{
   flex-wrap: nowrap;
 }
+
 }
