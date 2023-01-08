@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
 
 }
+
 @media (max-width: 991px) {
   body {
     /* padding-top: 55px; */
@@ -232,6 +233,12 @@ header {
   width: 100%;
   z-index: 200;
   transition: all 0.3s ease-in-out;
+}
+.change-color .nav-header li a{
+  color: var(--main-color);
+}
+.change-color .language-anchor{
+  color: #808080;
 }
 .top-header a {
   text-decoration: none;
@@ -462,15 +469,22 @@ width: 0;
 }
 
 .fixed-nav {
-  background-color: var(--main-color);
+  background-color:var(--sec-color);
   margin-top: -112px;
   transition: all 0.3s ease-in-out;
+}
+.fixed-nav .nav-header li a{
+  color: var(--main-color);
+}
+.fixed-nav .language-anchor{
+  color: #808080;
 }
 .fixed-nav .nav-header {
   padding: 10px 0;
 }
 .fixed-header {
   position: fixed;
+  background-color: var(--sec-color);
 }
 .fixed-header .fixed-nav {
   margin: 0;
@@ -2057,6 +2071,243 @@ html[dir="rtl"] .footer-accordion.active:after {
 }
 
 /*                                   footer                            */
+
+/*                  breadcrumb                        */
+.breadcrumb-sec {
+  position: relative;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 44px 0 42px;
+    margin-top: 105px;
+}
+.breadcrumb-sec .page-head {
+  font-size: 24px;
+  color: var(--sec-color);
+ 
+  font-family: 'Montserrat-Arabic-SemiBold';
+  margin-bottom: 11px;
+  position: relative;
+  padding: 0;
+  text-transform: capitalize;
+  text-align: center;
+  z-index: 2;
+}
+.fixall {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+/* .hide-bg {
+  display: none;
+} */
+ol.breadcrumb {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+ ol.breadcrumb li a,  ol.breadcrumb li span,  ol.breadcrumb li {
+  font-size: 14px;
+  font-family: 'Montserrat-Arabic-Light';
+  color: var(--main-hover);
+  text-decoration: none;
+}
+ol.breadcrumb li:not(.active):after {
+  content: "/";
+  padding: 0 7px;
+}
+
+@media (max-width: 991px){
+  .custum-breadcrumb, .breadcrumb-sec {
+    padding: 50px 0 40px;
+    margin-top: 66px;
+    height: 80px;
+    margin-bottom: 50px;
+}
+ol.breadcrumb {
+  display: none;
+}
+}
+/*                         breadcrumb-section                    */
+
+/*                         review-section                    */
+.review-section{
+ 
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 67px 0 124px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.review-section h2{
+  font-size: 22px;
+  color: var(--main-color);
+  font-family: "Montserrat-Arabic-Light";
+  margin: 0 auto 39px;
+  text-transform: capitalize;
+  text-align: center;
+
+}
+
+.review-form label{
+  color: var(--main-color);
+  font-size: 14px;
+  text-align: start;
+  margin-inline-start: 47px;
+  display: flex;
+  text-transform: capitalize;
+}
+.required-label:after{
+  content:" * ";
+  color: red;
+}
+.review-input{
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  transition: 0.5s;
+  margin-inline-start: 12px;
+}
+.review-input:focus{
+  border: 2px solid var(--main-color);
+}
+.extra-label-margin{
+  margin-top: 8px;
+}
+.checkbox-div{
+  display: flex;
+  align-items: center;
+  margin-inline-start: 47px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.checkbox-div input{
+  width: 24px;
+    height: 24px;
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 3px;
+}
+.checkbox-div label{
+  margin-inline-start: 11px !important;
+  font-family: "Montserrat-Arabic-Light";
+  margin-bottom: 0;
+}
+.checkbox-div div{
+  display: flex;
+}
+.first-check-block{
+  margin-inline-end: 145px;
+  width: 145px;
+}
+html[dir="ltr"] .extra-for-price .first-check-block{
+  width: 205px;
+}
+.without-margin{
+  margin-bottom: 0 !important;
+}
+.review-textarea{
+  background-color: rgb(242, 242, 242);
+  width: 456px;
+  height: 100px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  transition: 0.5s;
+  margin-inline-start: 12px;
+}
+.review-textarea:focus{
+  border: 2px solid var(--main-color);
+}
+.send-btn{
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  margin: 0 auto ;
+  color: var(--sec-color);
+  font-size: 17px;
+  font-family: "Montserrat-Arabic-Medium";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+.send-btn:hover{
+  background-color: var(--main-hover);
+}
+.serve-title{
+  max-width: 100%;
+  height: 38px;
+  background-color: var(--main-color);
+  color: var(--sec-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-inline-start: 47px;
+  text-transform: capitalize;
+}
+.checkbox-div span{
+  font-size: 14px;
+  color: #7b7a7b;
+  font-family: "Montserrat-Arabic-Medium";
+}
+.extra-for-price{
+  max-width: 100%;
+  justify-content: space-between;
+}
+.total{
+  color: var(--main-color);
+  font-size: 24px;
+  font-family: "Montserrat-Arabic-Medium";
+  text-align: center;
+  margin: 54px 0 10px;
+  text-transform: capitalize;
+ 
+}
+.tax{
+  font-size: 12px;
+  font-family: "Montserrat-Arabic-Light";
+  color: #ff0000;
+  display: block;
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+.change-width{
+  width: 226px;
+}
+html[dir="ltr"] .change-width{
+  width: 310px;
+}
+
+
+/*                         review-section                    */
 /*                                    media query                                    */
 /*                    menu in phone size                      */
 
@@ -2064,6 +2315,44 @@ html[dir="rtl"] .footer-accordion.active:after {
   html[dir="ltr"] .language-anchor{
     /* margin-inline-end: 8px; */
     margin-inline-start: 8px;
+  }
+  .review-section{
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+  }
+  .review-section h2{
+    font-size: 20px;
+  }
+  .review-input{
+    width: 100%;
+    height: 45px;
+  }
+  .first-check-block{
+    width: 135px;
+    margin-inline-end: 70px;
+  }
+  .review-form label{
+    margin-inline-start: 22px;
+    white-space: nowrap;
+  }
+  .checkbox-div{
+    margin-inline-start: 22px;
+  }
+  .send-btn{
+    height: 40px;
+  }
+  .review-form{
+    width: 93%;
+  }
+  .review-textarea{
+    width: 100%;
+  }
+  .serve-title{
+    margin-inline-start: 22px;
+  }
+  .total{
+    font-size: 22px;
   }
   .contact-record{
     flex-wrap: wrap;
@@ -2371,6 +2660,11 @@ html[dir="rtl"] .footer-accordion.active:after {
     white-space: inherit;
     height: 42px;
   }
+  .review-section{
+    
+    padding: 0 0 60px;
+
+  }
 }
 @media (min-width: 771px) and (max-width: 994px) {
   .best-employees-text h2{
@@ -2448,7 +2742,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   grid-gap: 20px;
  }
  .hamburger-lines .line{
-  background-color: #fff;
+  background-color:var(--main-color);
  }
  .open-bars .hamburger-lines .line1{
   background-color: #808080;
@@ -2519,6 +2813,11 @@ html[dir="rtl"] .footer-accordion.active:after {
 
   
 }
+@media (min-width: 460px) and (max-width: 766px)  {
+  .first-check-block{
+    width: 235px !important;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1420px)  {
 html[dir="ltr"] .mission-vision-section-img {
   margin-inline-start:-10px;
@@ -2569,6 +2868,12 @@ html[dir="rtl"] .mission-vision-section-img {
 }
 .contact-record{
   flex-wrap: nowrap;
+}
+.first-check-block{
+  width: 400px;
+}
+.review-section{
+  padding: 0 0 50px;
 }
 
 }
