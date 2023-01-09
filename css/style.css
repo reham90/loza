@@ -237,6 +237,18 @@ header {
 .change-color .nav-header li a{
   color: var(--main-color);
 }
+.change-color .cats-dispaly{
+  background-color: #9d6caee8;
+}
+.change-color .cats-dispaly::before{
+  border-bottom: 8px solid #9d6caee8;
+}
+.change-color .cats-dispaly .cat-li a{
+  color: var(--sec-color) !important;
+}
+.change-color .cats-dispaly .cat-li a:hover{
+  color: rgba(255,255,255,0.7) !important;
+}
 .change-color .language-anchor{
   color: #808080;
 }
@@ -402,6 +414,13 @@ width: 0;
     padding: 0;
     width: unset;
   }
+  .change-color .cats-dispaly{
+    background-color: transparent;
+  }
+  .change-color .cats-dispaly .cat-li a{
+    color: var(--main-color) !important;
+  }
+ 
   .cats-dispaly .cat-li{
     margin: 0 auto;
   }
@@ -485,6 +504,7 @@ width: 0;
 .fixed-header {
   position: fixed;
   /* background-color: var(--sec-color); */
+  box-shadow: 0px -2px 5px 2px #80808061;
 }
 .fixed-header .fixed-nav {
   margin: 0;
@@ -635,6 +655,9 @@ html[dir="rtl"] .open-search {
  
   .features-box img{
     width: 100% !important;
+  }
+  .fixed-header{
+    background-color: var(--sec-color);
   }
   
 
@@ -2173,6 +2196,9 @@ ol.breadcrumb {
 .extra-for-price div{
   width: 100% !important;
 }
+.extra-margin-3{
+  margin-bottom: 5px !important;
+}
 /* html[dir="ltr"] .review-form label{
   margin-inline-start: 40px;
 } */
@@ -2200,6 +2226,13 @@ ol.breadcrumb {
 .extra-label-margin{
   margin-top: 8px;
 }
+.extra-label-margin-2{
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
+.extra-margin-bottom{
+  margin-bottom: 24px;
+}
 .checkbox-div{
   display: flex;
   align-items: center;
@@ -2209,10 +2242,23 @@ ol.breadcrumb {
   margin-bottom: 30px;
 }
 .checkbox-div input{
-  width: 24px;
+  width: 27px;
     height: 24px;
     border: 2px solid rgb(230, 230, 230);
     border-radius: 3px;
+}
+.checkbox-div input::before{
+  content: "";
+  display: block;
+  border: 2px solid rgb(230, 230, 230);
+  text-align: center;
+  height: 24px;
+  width: 24px;
+  left: 0;
+  top: 5px;
+  background-color: var(--sec-color);
+  font-family: "Montserrat";
+  border-radius: 3px;
 }
 .checkbox-div label{
   margin-inline-start: 11px !important;
@@ -2222,7 +2268,7 @@ ol.breadcrumb {
 }
 .checkbox-div div{
   display: flex;
-  width: 215px;
+  width: 222px;
 }
 .first-check-block{
   /* margin-inline-end: 145px; */
@@ -2233,6 +2279,7 @@ html[dir="ltr"] .extra-for-price .first-check-block{
 }
 .without-margin{
   margin-bottom: 0 !important;
+  margin-top: 0;
 }
 .review-form{
   width: 100%;
@@ -2241,10 +2288,10 @@ html[dir="ltr"] .extra-for-price .first-check-block{
 .checkbox-div input:checked::before {
   content: "";
   display: block;
- 
+  border-color: var(--main-color);
   text-align: center;
-  height: 22px;
-  width: 22px;
+  height: 24px;
+  width: 24px;
   left: 0;
   top: 5px;
   background-color: var(--main-color);
@@ -2256,14 +2303,15 @@ html[dir="ltr"] .extra-for-price .first-check-block{
 .checkbox-div input:checked::after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
   display: block;
-  margin-top: -21px;
-  margin-inline-start: 3.5px;
+  margin-top: -22px;
+  margin-inline-start: 4.5px;
   left: 3px;
   top: 3px;
 }
 .review-textarea{
   background-color: rgb(242, 242, 242);
-  width: 456px;
+  width: 100%;
+  padding: 15px 35px;
   height: 100px;
   border-radius: 25px;
   border: 2px solid transparent;
@@ -2306,9 +2354,11 @@ html[dir="ltr"] .extra-for-price .first-check-block{
   display: flex;
   align-items: center;
   padding: 0 15px;
-  margin-inline-start: 47px;
-  margin-inline-end: 47px;
+  margin-inline-start: 46px;
+  margin-inline-end: 46px;
   text-transform: capitalize;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 .checkbox-div span{
   font-size: 14px;
@@ -2317,7 +2367,7 @@ html[dir="ltr"] .extra-for-price .first-check-block{
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-inline-end: 47px;
+  margin-inline-end: 46px;
 }
 .extra-for-price{
   max-width: 100%;
@@ -2380,7 +2430,7 @@ html[dir="ltr"] .change-width{
     width: 93%;
   }
   .checkbox-div{
-    margin-inline-start: 33px;
+    margin-inline-start: 25px;
   }
   .send-btn{
     height: 40px;
@@ -2928,5 +2978,10 @@ html[dir="rtl"] .mission-vision-section-img {
 .review-section{
   padding: 0 0 50px;
 }
-
+.checkbox-div input{
+  width: 24px;
+}
+.checkbox-div {
+  margin-inline-start: 33px;
+}
 }
