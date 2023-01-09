@@ -484,7 +484,7 @@ width: 0;
 }
 .fixed-header {
   position: fixed;
-  background-color: var(--sec-color);
+  /* background-color: var(--sec-color); */
 }
 .fixed-header .fixed-nav {
   margin: 0;
@@ -2156,7 +2156,7 @@ ol.breadcrumb {
   color: var(--main-color);
   font-family: "Montserrat-Arabic-Light";
   margin: 0 auto 39px;
-  text-transform: capitalize;
+
   text-align: center;
 
 }
@@ -2166,9 +2166,16 @@ ol.breadcrumb {
   font-size: 14px;
   text-align: start;
   margin-inline-start: 47px;
-  display: flex;
+  /* display: flex; */
+  width: 100%;
   text-transform: capitalize;
 }
+.extra-for-price div{
+  width: 100% !important;
+}
+/* html[dir="ltr"] .review-form label{
+  margin-inline-start: 40px;
+} */
 .required-label:after{
   content:" * ";
   color: red;
@@ -2181,6 +2188,7 @@ ol.breadcrumb {
   border: 2px solid transparent;
   outline: none;
   display: flex;
+  padding: 0 30px;
   align-items: center;
   margin-bottom: 18px;
   transition: 0.5s;
@@ -2210,19 +2218,48 @@ ol.breadcrumb {
   margin-inline-start: 11px !important;
   font-family: "Montserrat-Arabic-Light";
   margin-bottom: 0;
+  min-height: 35px;
 }
 .checkbox-div div{
   display: flex;
+  width: 215px;
 }
 .first-check-block{
-  margin-inline-end: 145px;
-  width: 145px;
+  /* margin-inline-end: 145px; */
+  /* width: 215px; */
 }
 html[dir="ltr"] .extra-for-price .first-check-block{
   width: 205px;
 }
 .without-margin{
   margin-bottom: 0 !important;
+}
+.review-form{
+  width: 100%;
+  position: relative;
+}
+.checkbox-div input:checked::before {
+  content: "";
+  display: block;
+ 
+  text-align: center;
+  height: 22px;
+  width: 22px;
+  left: 0;
+  top: 5px;
+  background-color: var(--main-color);
+  font-family: "Montserrat";
+  border-radius: 3px;
+  
+}
+
+.checkbox-div input:checked::after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+  display: block;
+  margin-top: -21px;
+  margin-inline-start: 3.5px;
+  left: 3px;
+  top: 3px;
 }
 .review-textarea{
   background-color: rgb(242, 242, 242);
@@ -2270,12 +2307,17 @@ html[dir="ltr"] .extra-for-price .first-check-block{
   align-items: center;
   padding: 0 15px;
   margin-inline-start: 47px;
+  margin-inline-end: 47px;
   text-transform: capitalize;
 }
 .checkbox-div span{
   font-size: 14px;
   color: #7b7a7b;
   font-family: "Montserrat-Arabic-Medium";
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-inline-end: 47px;
 }
 .extra-for-price{
   max-width: 100%;
@@ -2325,7 +2367,7 @@ html[dir="ltr"] .change-width{
     font-size: 20px;
   }
   .review-input{
-    width: 100%;
+    width: 93%;
     height: 45px;
   }
   .first-check-block{
@@ -2334,22 +2376,27 @@ html[dir="ltr"] .change-width{
   }
   .review-form label{
     margin-inline-start: 22px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    width: 93%;
   }
   .checkbox-div{
-    margin-inline-start: 22px;
+    margin-inline-start: 33px;
   }
   .send-btn{
     height: 40px;
   }
   .review-form{
-    width: 93%;
+    width: 100%;
   }
   .review-textarea{
-    width: 100%;
+    width: 93%;
   }
   .serve-title{
     margin-inline-start: 22px;
+    margin-inline-end: 22px;
+  }
+  .checkbox-div span{
+    margin-inline-end: 22px;
   }
   .total{
     font-size: 22px;
@@ -2742,7 +2789,13 @@ html[dir="ltr"] .change-width{
   grid-gap: 20px;
  }
  .hamburger-lines .line{
-  background-color:var(--main-color);
+  background-color:var(--sec-color);
+ }
+ .fixed-nav .hamburger-lines .line{
+  background-color: var(--main-color);
+ }
+ .change-color .hamburger-lines .line{
+  background-color: var(--main-color);
  }
  .open-bars .hamburger-lines .line1{
   background-color: #808080;
