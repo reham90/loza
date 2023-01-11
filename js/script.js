@@ -181,7 +181,7 @@ $(document).ready(function () {
  ///////// **product-section** /////////
  var screen = new Swiper(".product-section .swiper-container", {
   loop: true,
-  autoplay: false,
+  autoplay: true,
   pagination: {
     el: ".product-section .swiper-pagination",
     clickable: true,

@@ -1163,13 +1163,17 @@ font-family: "Montserrat-Arabic-Light";
 
 }
 .product-block .services-figure{
-  width: 217px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
   height: 217px;
+  position: relative;
+    overflow: hidden;
 }
 .product-block .services-img{
   width:auto !important;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+
 }
 .about-us-head-2{
   font-size: 30px;
@@ -1597,10 +1601,9 @@ html[dir="ltr"] .extra-margin{
 }
 .product-block{
   border:2px solid rgb(240, 240, 240) ;
-  display: flex;
- flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+overflow: hidden;
+
+ 
   padding: 30px 0 ;
   overflow: hidden;
   cursor: pointer;
@@ -1609,7 +1612,7 @@ a:hover{
   text-decoration: none;
 }
 .product-block:hover .services-img{
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .product-link{
   font-size: 14px;
@@ -2535,8 +2538,12 @@ html[dir="ltr"] .change-width{
   }
   .nav-head {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 25px 0 10px;
+    display: flex;
+    /* justify-content: center; */
+    padding: 25px 0 10px;
+   
   }
   .fixed-nav .nav-head {
     padding: 18px 0 10px;
@@ -2793,6 +2800,9 @@ html[dir="ltr"] .change-width{
   .best-employees-text h2{
     margin-inline-start: -20px !important;
   }
+  /* .nav-head{
+    width: 17%;
+  } */
   .services-link{
     font-family: 'Montserrat-Arabic-Light';
     font-size: 14px;
@@ -2815,8 +2825,14 @@ html[dir="ltr"] .change-width{
     padding: 25px 0 78px;
   }
   .product-block .services-figure{
-    width:170px;
-    height: 170px;
+   
+    height: 156px;
+  }
+  .product-block{
+    padding: 20px 0;
+  }
+  .product-block .services-img{
+    width: 50px !important;
   }
   .best-employees-text h2{
     font-size: 24px;
@@ -3011,4 +3027,19 @@ html[dir="rtl"] .mission-vision-section-img {
 }
 
 
+}
+
+@media (min-width:580px) and (max-width: 767px)  {
+  .nav-head{
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+  }
+}
+@media (min-width:768px) and (max-width: 986px)  {
+  .nav-head{
+    width: 35%;
+    justify-content: center;
+    text-align: center;
+  }
 }
