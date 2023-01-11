@@ -43,7 +43,7 @@ $(document).ready(function () {
   $stickyNav = $(".top-header");
   $(window).on("scroll load", function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 200) {
+    if (scroll >= 112) {
       $stickyNav.addClass("fixed-nav", 500);
     } else {
       $stickyNav.removeClass("fixed-nav", 500);
@@ -181,7 +181,7 @@ $(document).ready(function () {
  ///////// **product-section** /////////
  var screen = new Swiper(".product-section .swiper-container", {
   loop: true,
-  autoplay: true,
+  autoplay: false,
   pagination: {
     el: ".product-section .swiper-pagination",
     clickable: true,
